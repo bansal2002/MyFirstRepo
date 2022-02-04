@@ -2,7 +2,7 @@ package com.vechicledekho.management;
 
 import com.vechicledekho.data.Bike;
 import com.vechicledekho.data.Car;
-import com.vechicledekho.data.VechicleProperties;
+import com.vechicledekho.data.Vechicle;
 import com.vechicledekho.ui.DisplayVechicleInformation;
 
 public class VechicalManagment {
@@ -18,6 +18,11 @@ public class VechicalManagment {
 		car.setMaximumSpeed(200);
 		car.setMileage(13);
 		car.setNumberOfSeats(5);
+		car.setInsurance(true);
+		car.setHorsePower(500);
+		car.setRto(true);
+		car.setMadeYear(2020);
+		car.setTubeless(false);
 		
 		Bike bike = new Bike();
 		bike.setModalName("Royal Infield Classic 350");
@@ -27,14 +32,19 @@ public class VechicalManagment {
 		bike.setColor("Black");
 		bike.setMileage(30);
 		bike.setMaximumSpeed(120);
+		bike.setInsurance(true);
+		bike.setMadeYear(2019);
+		bike.setRto(true);
+		bike.setTubeless(false);
+		bike.setTypeOfBike("Touring Bike");
 		
 		DisplayVechicleInformation display = new DisplayVechicleInformation();
 		
-		VechicleProperties[] listOfVechicle = new VechicleProperties[2];
+		Vechicle[] listOfVechicle = new Vechicle[2];
 		listOfVechicle[0] = car;
 		listOfVechicle[1] = bike;
 		
-		for(VechicleProperties vp : listOfVechicle)
+		for(Vechicle vp : listOfVechicle)
 		{
 			display.displayInformation(vp);
 		}

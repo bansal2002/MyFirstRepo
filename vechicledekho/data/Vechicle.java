@@ -1,6 +1,6 @@
 package com.vechicledekho.data;
 
-public class VechicleProperties {
+public class Vechicle {
 	
 	private String modalName;
 	private long price;
@@ -9,7 +9,35 @@ public class VechicleProperties {
 	private String color;	
 	private int mileage;
 	private int maximumSpeed;
+	private boolean isInsurance;
+	private boolean isRto;
+	private int madeYear;
+    private boolean isTubeless;
 	
+	public boolean isInsurance() {
+		return isInsurance;
+	}
+	public void setInsurance(boolean isInsurance) {
+		this.isInsurance = isInsurance;
+	}
+	public boolean isRto() {
+		return isRto;
+	}
+	public void setRto(boolean isRto) {
+		this.isRto = isRto;
+	}
+	public int getMadeYear() {
+		return madeYear;
+	}
+	public void setMadeYear(int madeYear) {
+		this.madeYear = madeYear;
+	}
+	public boolean isTubeless() {
+		return isTubeless;
+	}
+	public void setTubeless(boolean isTubeless) {
+		this.isTubeless = isTubeless;
+	}
 	public String getModalName() {
 		return modalName;
 	}
