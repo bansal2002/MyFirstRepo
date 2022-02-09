@@ -22,11 +22,11 @@ public class DisplayData {
 			System.out.println(result.getString(2));
 			System.out.println(result.getInt(3));
 			System.out.println(result.getString(4));
-			System.out.println(result.getString(4));
-			System.out.println(result.getInt(5));
+			System.out.println(result.getString(5));
 			System.out.println(result.getInt(6));
 			System.out.println(result.getString(7));
 			System.out.println(result.getInt(8));
+			System.out.println(result.getString(9));
 		}
 
 	}

@@ -8,16 +8,22 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Vechicle {
 	
-	//private int vechicleId;
+	private int vechicleId;
 	private String modalName;
 	private long price;
 	private String fuelType;
 	private String companyName;
-	private String color;	
+	private String colour;	
 	private int mileage;
 	private int maximumSpeed;
     private String vechicleType;
     
+	public int getVechicleId() {
+		return vechicleId;
+	}
+	public void setVechicleId(int vechicleId) {
+		this.vechicleId = vechicleId;
+	}
 	public String getModalName() {
 		return modalName;
 	}
@@ -42,11 +48,11 @@ public class Vechicle {
 	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
 	}
-	public String getColor() {
-		return color;
+	public String getColour() {
+		return colour;
 	}
-	public void setColor(String color) {
-		this.color = color;
+	public void setColor(String colour) {
+		this.colour = colour;
 	}
 	public int getMileage() {
 		return mileage;

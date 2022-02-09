@@ -21,10 +21,7 @@ public class VechicleXmlReader {
 		
 		DatabaseManager manager = new DatabaseManager();
 		
-		try {
-			
-			//Class.forName("com.mysql.cj.jdbc.Driver");  
-			//Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/vechicledekho","root","root"); 
+		try { 
 			
 			PreparedStatement stmt=manager.connect().prepareStatement("insert into vechicle values(?,?,?,?,?,?,?,?,?)");
 			
@@ -36,12 +33,12 @@ public class VechicleXmlReader {
 		    
 		    int count = 1;
 			for(Vechicle vechicle : vechicleList.getVechicles()) {
-	            
+	            if(vechicle.getVechicleId() == NULL) {
 				stmt.setInt(1, NULL);
 				stmt.setString(2, vechicle.getModalName());
 				stmt.setLong(3, vechicle.getPrice());
 				stmt.setString(4,vechicle.getCompanyName());
-			    stmt.setString(5,vechicle.getColor());
+			    stmt.setString(5,vechicle.getColour());
 				stmt.setInt(6,vechicle.getMileage());
 				stmt.setString(7,vechicle.getFuelType());
 				stmt.setInt(8,vechicle.getMaximumSpeed());
@@ -49,6 +46,22 @@ public class VechicleXmlReader {
 				
 				int i = stmt.executeUpdate();
 				System.out.println("Record submit");
+	            }else {
+	            	PreparedStatement pstmt=manager.connect().prepareStatement("update vechicle set id = ?,modal_name = ?, price = ?,company_name = ?,colour = ?,mileage = ?,fuelType = ?,maximum_speed = ?,vechicle_type = ? where id = ?");
+	            	pstmt.setInt(1, vechicle.getVechicleId());
+					pstmt.setString(2, vechicle.getModalName());
+					pstmt.setLong(3, vechicle.getPrice());
+					pstmt.setString(4,vechicle.getCompanyName());
+				    pstmt.setString(5,vechicle.getColour());
+					pstmt.setInt(6,vechicle.getMileage());
+					pstmt.setString(7,vechicle.getFuelType());
+					pstmt.setInt(8,vechicle.getMaximumSpeed());
+					pstmt.setString(9, vechicle.getVechicleType());
+					pstmt.setInt(10, vechicle.getVechicleId());
+					
+					int i = pstmt.executeUpdate();
+					System.out.println("Record update");
+	            }
 			}
 			
 		} catch (JAXBException e) {
