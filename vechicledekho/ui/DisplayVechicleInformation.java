@@ -18,10 +18,7 @@ public class DisplayVechicleInformation {
 		System.out.println("Vechile maximum speed : "+properties.getMaximumSpeed());
 		System.out.println("Vechile mileage : "+properties.getMileage()+"KM/L");
 		System.out.println("Vechile price : "+properties.getPrice());
-		System.out.println("Vechile made year ; "+properties.getMadeYear());
-		System.out.println("Vechile Insurence ; "+properties.isInsurance());
-		System.out.println("Vechile RTO ; "+properties.isRto());
-		System.out.println("Vechile tyre type ; "+properties.isTubeless());
+
 		
 		if(properties instanceof Car) {	
 			System.out.println("Number of seats : "+((Car) properties).getNumberOfSeats());

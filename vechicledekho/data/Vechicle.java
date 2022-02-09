@@ -1,7 +1,14 @@
 package com.vechicledekho.data;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "Vechicle")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Vechicle {
 	
+	//private int vechicleId;
 	private String modalName;
 	private long price;
 	private String fuelType;
@@ -9,35 +16,8 @@ public class Vechicle {
 	private String color;	
 	private int mileage;
 	private int maximumSpeed;
-	private boolean isInsurance;
-	private boolean isRto;
-	private int madeYear;
-    private boolean isTubeless;
-	
-	public boolean isInsurance() {
-		return isInsurance;
-	}
-	public void setInsurance(boolean isInsurance) {
-		this.isInsurance = isInsurance;
-	}
-	public boolean isRto() {
-		return isRto;
-	}
-	public void setRto(boolean isRto) {
-		this.isRto = isRto;
-	}
-	public int getMadeYear() {
-		return madeYear;
-	}
-	public void setMadeYear(int madeYear) {
-		this.madeYear = madeYear;
-	}
-	public boolean isTubeless() {
-		return isTubeless;
-	}
-	public void setTubeless(boolean isTubeless) {
-		this.isTubeless = isTubeless;
-	}
+    private String vechicleType;
+    
 	public String getModalName() {
 		return modalName;
 	}
@@ -80,6 +60,13 @@ public class Vechicle {
 	public void setMaximumSpeed(int maximumSpeed) {
 		this.maximumSpeed = maximumSpeed;
 	}
+	public String getVechicleType() {
+		return vechicleType;
+	}
+	public void setVechicleType(String vechicleType) {
+		this.vechicleType = vechicleType;
+	}
+	
 	
 
 }

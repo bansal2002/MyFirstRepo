@@ -18,11 +18,6 @@ public class VechicalManagment {
 		car.setMaximumSpeed(200);
 		car.setMileage(13);
 		car.setNumberOfSeats(5);
-		car.setInsurance(true);
-		car.setHorsePower(500);
-		car.setRto(true);
-		car.setMadeYear(2020);
-		car.setTubeless(false);
 		
 		Bike bike = new Bike();
 		bike.setModalName("Royal Infield Classic 350");
@@ -32,11 +27,7 @@ public class VechicalManagment {
 		bike.setColor("Black");
 		bike.setMileage(30);
 		bike.setMaximumSpeed(120);
-		bike.setInsurance(true);
-		bike.setMadeYear(2019);
-		bike.setRto(true);
-		bike.setTubeless(false);
-		bike.setTypeOfBike("Touring Bike");
+		
 		
 		DisplayVechicleInformation display = new DisplayVechicleInformation();
 		
